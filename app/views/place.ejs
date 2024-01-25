@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+     
+        <div class="content">
+            
+            <h1>
+                Les permanences
+            </h1>
+            <p>
+                <ul>
+                    <% for(const place of places) {%>
+                        <li>
+                            <%= place.name%> - <%= place.address1%> <%= place.zipCode%> <%= place.city%>
+                        </li>                  
+                    <%}%>
+                </ul>
+            </p>
+        </div>
+
+<%- include('partials/footer') %>
+
