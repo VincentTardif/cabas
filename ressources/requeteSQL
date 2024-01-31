@@ -1,0 +1,25 @@
+SELECT * FROM distribution
+INNER JOIN place
+ON distribution.placeId=place.id
+WHERE date="2023-10-27 18:30:00";
+
+
+-- les plans du 27/10/2023
+SELECT name FROM contract
+INNER JOIN distribution
+ON contract.id=distribution.contractId
+WHERE date="2023-10-27 18:30:00";
+
+
+
+SELECT "List"."id", "List"."name", "List"."position", "List"."created_at", "List"."updated_at", "cards"."id" AS "cards.id", "cards"."content" AS "cards.content", "cards"."position" AS "cards.position", "cards"."color" AS "cards.color", "cards"."created_at" AS "cards.created_at", "cards"."updated_at" AS "cards.updated_at", "cards"."list_id" AS "cards.list_id", "cards->tags"."id" AS "cards.tags.id", "cards->tags"."name" AS "cards.tags.name", "cards->tags"."color" AS "cards.tags.color", "cards->tags"."created_at" AS "cards.tags.created_at", "cards->tags"."updated_at" AS "cards.tags.updated_at"
+FROM "list" AS "List"
+LEFT OUTER JOIN "card" AS "cards" ON "List"."id" = "cards"."list_id"
+LEFT OUTER JOIN ( "card_has_tag" AS "cards->tags->card_has_tag"
+INNER JOIN "tag" AS "cards->tags"
+ON "cards->tags"."id" = "cards->tags->card_has_tag"."tag_id")
+ON "cards"."id" = "cards->tags->card_has_tag"."card_id"
+ORDER BY "List"."position"
+ASC, "List"."created_at"
+DESC, "cards"."position"
+ASC;

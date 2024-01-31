@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+        <div class="">            
+            <h1>
+                Plans disponibles à la permanence du <%=contracts[0].date.toLocaleDateString('fr-FR', dateFormat)%>                
+            </h1>       
+            <% for(const contract of contracts) {%>
+                <div class="emargement">
+                    <ul>                   
+                        <li class="title-emargement"><%= contract.name%></li>                                          
+                    </ul>
+                </div>
+            <%}%>
+        </div>
+
+<%- include('partials/footer') %>
