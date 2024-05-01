@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -12,27 +12,48 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff"> 
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
     <title>Le CABAS Briéron</title>
 </head>
 <body>
     <header>
-       <div class="content-header">                
+        <div class="header-content">
+
+        <a href="/" alt="Accueil">         
                <figure class="logo-header">
                 <img class="logo" src="/images/CABAS Brieron logo.png" alt="Logo Le CABAS Briéron" srcset="">
                </figure>
-               <div class="content-title">
-                   <p class="title">Le CABAS Briéron</p>
-                   <p class="subtitle">Collectif d'Achats Biologiques Alternatifs et Solidaires</p>
-                </div>  
-        </div>
-        <div class="nav">
-            <a class="button-header" href="/">Accueil</a>
-            <a class="button-header" href="/places"> Les Permanences</a>
-            <a class="button-header" href="/producteurs"> Les Producteurs</a>
-            <a class="button-header" href="/permanences"> Les Permanences</a>
-        </div>
-        <img class="top-img" src="/images/Bandeau-legumes-1024x270.png" alt="Logo Le CABAS Briéron" srcset="">       
+        </a>
 
-    </header>
-<main class="container">
+    <!-- La navigation n'est visible qu'au format desktop -->
+    <nav class="nav-menu" aria-label="header navigation">
+
+        <!-- Notre liste comprenant notre menu -->
+        <ul class="nav-text" role="menu" aria-labelledby="menubutton">
+            <!-- Attention à bien mettre les liens dans chaque élément <li> et non l'inverse -->
+            <li role="menuitem">
+                <a class="nav-text" href="/"> ACCUEIL</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-text" href="https://cagette.cabasbrieron.fr/"> CAGETTEPEI</a>
+            </li>
+            <li role="menuitem">
+                <a class="nav-text" href="/contact"> NOUS CONTACTER</a>
+            </li>
+        </ul>
+        </nav>
+                <div class="nav">
+                    <!-- <a class="nav-text" href="/">ACCUEIL</a> -->
+                    <!-- <img class="cagette-logo" src="/images/cagettePei-logo.jpg" alt="CagettePei"> -->
+                    <a class="nav-text" href="/"> ACCUEIL</a>
+                    <a class="nav-text" href="https://cagette.cabasbrieron.fr/"> CAGETTEPEI</a>
+                    <a class="nav-text" href="/contact"> NOUS CONTACTER</a>
+                </div>
+        </div>
+        <!-- <img class="top-img" src="/images/Bandeau-legumes-1024x270.png" alt="Logo Le CABAS Briéron" srcset="">        -->
+
+
+</header>

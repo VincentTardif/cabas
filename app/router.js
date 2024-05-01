@@ -6,11 +6,20 @@ const mainController = require('./controllers/mainController');
 
 router.get('/', mainController.homePage);
 
+router.get('/about', mainController.aboutPage);
+
 router.get('/places', mainController.placePage);
 
-router.get('/producteurs', mainController.vendorPage);
+router.get('/vendors', mainController.vendorPage);
 
 router.get('/permanences', mainController.distributionPage);
+
+router.get('/where', mainController.wherePage)
+
+router.get('/contact', mainController.contactPage);
+router.post('/sendMail', mainController.sendMail);
+
+
 
 
 

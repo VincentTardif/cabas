@@ -6,6 +6,9 @@ require('dotenv').config();
 
 const router = require('./app/router.js');
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.set('views', './app/views');
 app.set('view engine', 'ejs');
 

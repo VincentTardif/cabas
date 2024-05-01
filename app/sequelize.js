@@ -14,12 +14,6 @@ function connectionDatabase() {
             dialect: 'mysql',
             port: process.env.DB_PORT,
         }
-        );
-        // sequelize.authenticate().then(() => {
-        //     console.log('Connection has been established successfully.');
-        // }).catch((error) => {
-        //     console.error('Unable to connect to the database: ', error);
-        // });
-        
+        );        
     }
 module.exports = connectionDatabase;
