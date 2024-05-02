@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 :root {
     --green-light: #84bd55;
     --green-dark: #489570;
@@ -34,12 +30,11 @@ html {
 }
 
 body {
-    /* background-color: #F8F4E5; */
     font-family: 'Cabin', Arial, Helvetica, sans-serif;
-    width: 90%;
-    max-width: 1024px;
+    width: 1024px;
     margin: 0 auto;
 }
+
 h1, h2, h3, span {
     color: var(--grey-dark);
 }
@@ -68,6 +63,11 @@ span {
     display: none;
 }
 
+header {
+    width: 1024px;
+    margin: 0 auto;
+}
+
 .header-content {
     display: flex;
     padding: 10px 0 7px;
@@ -80,9 +80,6 @@ span {
 .logo {
     display: block;
     width: 100px;
-    /* padding: 10px 0 5px 0; */
-    /* position: relative;
-    top: 10px; */
 }
 
 .nav {
@@ -107,6 +104,7 @@ span {
 .container {
     display: block;
     width: 1024px;
+    margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 20px;
     background-color: var(--white);
@@ -210,25 +208,23 @@ span {
     border-radius: 10px;
 }
 
-.fonctionnement {
+.functioning {
     display: block;
     width: 1024px;
-    margin: 0 0 20px 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
     border-radius: 20px;
     background-color: var(--white);
     padding: 20px;
 }
 
-.contact-container {
-    display: flex;
-}
 
-.fonctionnement_container {
+.functioning_container {
     display: flex;
     justify-content: space-between;
 }
 
-.fonctionnement_content {
+.functioning_content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -236,32 +232,70 @@ span {
     width: 482px;
 }
 
-.fonctionnement_txt {
+.functioning_txt {
     line-height: 1.25;
 }
 
-.fonctionnement img {
+.functioning img {
     width: 482px;
     margin-top: 10px;
     border-radius: 10px;
+}
+
+.contact-container {
+    width: 1024px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-header {
     margin-bottom: 10px;
 }
 
+.contact-content {
+    display: flex;
+    width: 70%;
+}
+
 .contact-txt {
-    line-height: 1.25;
-    width: 50%;
+    text-align: center;
+
+}
+
+.contact-form {
+    margin-top: 10px;
+    width: 70%;
+    text-align: center;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+input {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+textarea {
+    margin: 5px;
+    width: 80%;
+    border-radius: 5px;
 }
 
 #maCarte {
     height: 490px;
 }
 
-.contact-content {
-    display: flex;
-}
+
 
 .content {
     display: block;
@@ -348,15 +382,14 @@ li {
 }
 
 .map-text {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 22px;
     font-weight: 700;
     color: var(--grey-dark);
     margin-top: 20px;
 }
 
-.vendors_container {
+.vendors-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -377,16 +410,43 @@ li {
 }
 
 @media screen and (max-width: 1024px) {
+body {
+    width: 690px;
+}
 
-
-.header-content {
+.header {
     width: 690px;
     margin: 0 auto;
 }    
+
+.header-content {
+    width: 690px;
+}
+
 .container {
     width: 690px;
     margin: 0 auto;
     margin-bottom: 20px;
+}
+
+
+
+.functioning {
+    width: 690px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.functioning_container {
+    display: block;
+    width: 100%;
+}
+
+.functioning_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .cartouches {
@@ -440,94 +500,144 @@ img {
 }
 
 .bandeau {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 690px;
-    height: 421.6px;
-    margin: 0 auto;
-    border-radius: 20px;
-    background-color: var(--white);
-    padding: 20px;
-}
-.bandeau-img {
-    margin: 0 10px 20px;
-}
-}
-
-@media screen and (max-width: 690px) {
-
-
-.container {
-    width: 100%;
-    height: 100%;
-}
-
-.info-small-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-    margin-bottom: 0;
-}
-
-.info-big{
-    height: 100%;
-}
-
-.link {
-    margin: 0 10px 20px;
-}
-
-.cartouches {
-    display: block;
-    height: 100%;
-}
-
-.paragraphe {
-    width: 100%;
-}
-
-.bandeau-img {
-    margin: 0 10px 20px;
-}
-
-.bandeau {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    border-radius: 20px;
-    background-color: var(--white);
-    padding: 20px;
-}
-}
-
-
-@media screen and (max-width: 735px) {
-
-.nav {
     display: none;
 }
 
-.nav-menu {
-    display: block;
+.vendors-container {
+    width: 690px;
+}
+.map-container {
+    width: 690px;
 }
 
-.nav-text {
-    margin: 10px 0;
+.contact-container {
+    width: 690px;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-}
-
-.header-content {
-    width: 100%;
-}
 
 }
 
+@media screen and (max-width: 735px) {
+    header {
+        width: 690px;
+
+    }
+    .header-content {
+        width: 100%;
+    }
+    
+    .nav-text {
+        margin: 20px 0;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    .header-content {
+        width: 100%;
+    }
+
+    .bandeau {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    body {
+        width: 90%;
+    }
+
+    header {
+        width: 100%;
+
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .functioning {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .contact-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    .functioning img {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .functioning_container {
+        display: block;
+        width: 100%;
+    }
+    
+    .functioning_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .info-small-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100%;
+        margin-bottom: 0;
+    }
+    
+    .info-big{
+        height: 100%;
+    }
+    
+    .link {
+        margin: 0 10px 20px;
+    }
+    
+    .cartouches {
+        display: block;
+        height: 100%;
+    }
+    
+    .paragraphe {
+        width: 100%;
+    }
+
+    .bandeau {
+        display: none;
+    }    
+    
+    .vendors-container {
+        width: 100%;
+    }
+    .map-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+    textarea {
+        margin: 5px;
+        width: 215px;
+        border-radius: 5px;
+    }
+}

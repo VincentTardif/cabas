@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 
-<section class="container">
+<section class="contact-container">
     <div class="contact-header">
         <h1>Contactez-nous...</h1>
     </div>     
@@ -13,10 +13,9 @@
             </p>
         </div>
     </div>
-    <div class="content-form">
-        <p> Vous pouvez aussi nous laisser un message
+    <div class="contact-form">
+        <p>Vous pouvez aussi nous laisser un message
             via le formulaire ci-dessous.
-            Nous vous répondrons dès que possible.
         </p>
         <form action="/sendMail" method="post" class="form-contact">
            <input type="text" name="firstName" id="firstName" placeholder="Prénom"/>
