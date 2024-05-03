@@ -2,6 +2,7 @@
 const connection = require('../connection.js');
 const Vendor = require('../models/vendor.js')
 const Distribution = require('../models/distribution.js')
+const VendorsData = require('../data/vendors.json');
 
 const nodemailer = require("nodemailer");
 require('dotenv').config();
@@ -73,13 +74,14 @@ const mainController = {
     });
   },
 
+
   vendorPage: async (req, res) => {
     const vendors = await Vendor.findAll();
     
     res.render('vendor', {
-      vendors,
+      VendorsData,
     });      
-    // console.log(vendors);
+    // console.log(VendorsData);
   },
   errorPage: (req, res) => {
     res.status(404).render('404');
