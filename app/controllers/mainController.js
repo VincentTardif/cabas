@@ -75,9 +75,7 @@ const mainController = {
   },
 
 
-  vendorPage: async (req, res) => {
-    const vendors = await Vendor.findAll();
-    
+  vendorPage: (req, res) => {
     res.render('vendor', {
       VendorsData,
     });      
