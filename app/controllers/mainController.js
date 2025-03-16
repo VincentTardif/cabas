@@ -86,6 +86,7 @@ const mainController = {
   },
         
   distributionPage: async (req, res) => {
+    // const contracts = connection.query('SELECT * FROM contract INNER JOIN distribution ON contract.id=distribution.contractId WHERE date="2023-10-27 18:30:00";',
     const contracts = connection.query('SELECT * FROM contract INNER JOIN distribution ON contract.id=distribution.contractId WHERE date="2023-10-27 18:30:00";',
     function (error, contracts) {
       const dateFormat = {
@@ -102,7 +103,7 @@ const mainController = {
       //  console.log(Object.values(contracts));
       // console.log(contracts);
       //  console.log(contracts[0].name);
-      console.log(contracts[0].date.toLocaleDateString('fr-FR', dateFormat));
+      // console.log(contracts[0].date.toLocaleDateString('fr-FR', dateFormat));
     });
   },
   errorPage: (req, res) => {
